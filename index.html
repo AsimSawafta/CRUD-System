@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="add-course">
+        <div class="container">
+           <form>
+            <h1>CRUD System</h1>
+            <div class="mb-3">
+                <label for="">Course name <span class="text-danger">*</span></label>
+                <input class="inputs form-control" type="text" placeholder="course name" id="courseName">
+                <div class=" text-danger" id="nameAlert"><p class="small">*please start with capital and name must between 3-18 chars</p></div>
+            </div>
+            <label for="">course category</label>
+            <input class="inputs form-control" type="text" placeholder="course category" id="courseCetegory">
+            <div class=" text-danger" id="catAlert"><p class="small">*please start with capital and category must between 3-20 chars</p></div>
+
+            <label for="">course price</label>
+            <input class="inputs form-control" type="number" placeholder="course price" id="coursePrice">
+            <div class=" text-danger" id="priceAlert"><p class="small">*Price must be between 100-999</p></div>
+
+            <label for="">course descriptions</label>
+            <textarea class="inputs form-control" placeholder="course descriptions" id="courseDescriptions"  ></textarea>
+            <div class="text-danger small" id="descAlert"></div>
+
+            <label for="">course capacity</label>
+            <input class="inputs form-control " type="number" placeholder="course capacity" id="courseCapacity">
+            <div class="text-danger small" id="capacityAlert"></div>
+
+            <input disabled type="submit" value="Add course" class="btn btn-outline-secondary mt-3" id="click">
+            <input disabled  type="submit" value="Update course" class="btn btn-outline-info mt-3" id="update">
+
+            <button class="btn btn-outline-secondary mt-3 " type="reset" id="clear">clear</button>
+  
+        </form>
+        </div>
+        <div class="container">
+          
+            <input type="search" placeholder="search..." id="search" class="form-control my-3">
+            <table class="table  table-striped">
+                <thead>
+                    <tr>
+                    <th>#</th>
+                    <th>name</th>
+                    <th>category</th>
+                    <th>price</th>
+                    <th>description</th>
+                    <th>capacity</th>
+                    <th>update</th>
+                    <th>delete</th>
+                   </tr>
+                </thead>
+                <button class="btn btn-outline-danger text-center my-3" id="deleteBtn">delete all</button>
+                <tbody id="data">
+
+                </tbody>
+
+            </table>
+      
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
